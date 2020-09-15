@@ -165,3 +165,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_speed: 1
   m_path: {fileID: 1590098911878217039, guid: 893487b05b6d0c041a72b35373681212, type: 3}
+  m_health: 30
+  m_rewardAmount: 3

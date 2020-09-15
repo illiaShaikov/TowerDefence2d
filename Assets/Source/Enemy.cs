@@ -6,11 +6,13 @@ namespace TowerDefense.Runtime
         [SerializeField] private float m_speed = default;
         [SerializeField] private Path m_path = default;
         [SerializeField] private int m_health = default;
+        [SerializeField] private int m_rewardAmount = default;
         private Vector3 m_start = default;
         private Vector3 m_end = default;
         private float m_interpolate = 0f;
         private int m_pathIndex = 0;
         bool isDead = false;
+
         Collider2D enemyCollider;
         Animator anim;
         public bool IsDead
@@ -42,7 +44,10 @@ namespace TowerDefense.Runtime
                     Debug.Log("Moving finished!");
                     enabled = false;
                     //Destroy(gameObject);
+                    Manager.Instance.RoundEscaped += 1;
+                    Manager.Instance.TotalEscaped += 1;
                     Manager.Instance.UnregisterEnemy(this);
+                    Manager.Instance.IsWaveOver();
                     return;
                 }
                 m_start = transform.position;
@@ -76,6 +81,9 @@ namespace TowerDefense.Runtime
         {
             isDead = true;
             enemyCollider.enabled = false;
+            Manager.Instance.TotalKilled += 1;
+            Manager.Instance.AddMoney(m_rewardAmount);
+            Manager.Instance.IsWaveOver();
         }
     }
 }

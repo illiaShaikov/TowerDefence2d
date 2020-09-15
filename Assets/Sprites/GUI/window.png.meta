@@ -1,7 +1,13 @@
 fileFormatVersion: 2
 guid: 76dc95e665c75714593b6d7d25c200f1
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -9051692800306759852
+    second: Banner
+  - first:
+      213: 1182513766734932090
+    second: panel
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -121,7 +127,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Banner
+      rect:
+        serializedVersion: 2
+        x: 3715
+        y: 5090
+        width: 1146
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45731c52b5de16280800000000000000
+      internalID: -9051692800306759852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: panel
+      rect:
+        serializedVersion: 2
+        x: 3699
+        y: 4130
+        width: 1180
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a78ae307102296010800000000000000
+      internalID: 1182513766734932090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
